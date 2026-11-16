@@ -159,3 +159,27 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .nb .more{font-weight:700;font-size:.88rem;color:var(--g);border-bottom:2px solid var(--a);align-self:flex-start}
 @media(max-width:960px){ .tabs{grid-template-columns:1fr} .tl{grid-template-columns:1fr 1fr} .aud{grid-template-columns:1fr 1fr} .tb:hover{transform:none} }
 @media(max-width:600px){ .tl,.aud{grid-template-columns:1fr} .tn{font-size:4rem} }
+
+/* ---------- v4: aktualności i artykuł */
+a.news{text-decoration:none;color:var(--i)} .meta{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9a7a3a;margin-bottom:.3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
+.chip{font:inherit;font-weight:700;font-size:.9rem;color:var(--g);background:#fff;border:1.5px solid var(--l);border-radius:99px;padding:.5rem 1.1rem;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--g)} .chip.on{background:var(--g);border-color:var(--g);color:#fff}
+.feat{display:grid;grid-template-columns:1.05fr 1fr;border:1px solid var(--l);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--i);background:#fff;transition:.25s}
+.feat:hover{transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(15,77,58,.55)}
+.feat .nth{height:auto;min-height:300px} .feat .nth svg{width:420px;right:-90px;top:-60px}
+.feat .nb{padding:clamp(1.6rem,3vw,2.6rem);justify-content:center} .feat h2{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:.8rem} .feat p{flex:0}
+.posts{margin-top:1.6rem} [hidden]{display:none!important}
+.ahead h1{max-width:24ch;font-size:clamp(1.8rem,3.6vw,2.8rem)} .crumbs{font-size:.85rem;color:#b9cdc4;margin-bottom:1.4rem} .crumbs a{color:#fff}
+.tag.st{position:static;display:inline-block;margin-bottom:1rem} .ameta{color:#b9cdc4;font-size:.88rem;font-weight:600;margin:1rem 0 0}
+.art{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.prose{max-width:70ch} .prose h2{font-size:1.55rem;margin:2.2rem 0 .8rem;scroll-margin-top:100px} .prose p{font-size:1.04rem}
+.toc{position:sticky;top:100px;background:var(--s);border-radius:12px;padding:1.5rem;display:grid;gap:.1rem}
+.toc h3{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem}
+.toc a{text-decoration:none;font-weight:600;font-size:.93rem;padding:.5rem 0 .5rem .9rem;border-left:3px solid #cfdcd4;transition:.2s} .toc a:hover{border-color:var(--a);padding-left:1.2rem}
+.abox{background:var(--g);color:#fff;border-radius:14px;padding:2rem;margin:2.4rem 0} .abox h3{color:#fff;font-size:1.3rem;margin-bottom:.5rem}
+.abox .btn{background:var(--a);color:var(--i);margin-top:.4rem}
+.faq details{border-bottom:1px solid var(--l);padding:1rem 0} .faq summary{font-weight:700;color:var(--g);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none} .faq summary:after{content:"+";font-size:1.5rem;line-height:1;color:var(--a);transition:transform .25s}
+.faq details[open] summary:after{transform:rotate(45deg)} .faq p{margin:.8rem 0 0}
+@media(max-width:960px){ .feat,.art{grid-template-columns:1fr} .feat .nth{min-height:180px} .toc{position:static;order:-1} }

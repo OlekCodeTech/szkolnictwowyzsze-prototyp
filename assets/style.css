@@ -30,7 +30,7 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .hg{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
 .hb{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;margin:1.9rem 0 1.6rem}
 .motto{font-weight:800;color:var(--g);border-left:4px solid var(--a);padding-left:.9rem;margin:0}
-.hp{position:relative} .hp img{border-radius:14px;aspect-ratio:3/2.25;object-fit:cover;width:100%;box-shadow:0 26px 60px -28px rgba(15,77,58,.55)}
+.hp{position:relative} .hp img{border-radius:14px;aspect-ratio:3/2.05;object-fit:cover;object-position:50% 0;width:100%;box-shadow:0 26px 60px -28px rgba(15,77,58,.55)}
 .hp:before{content:"";position:absolute;inset:26px -22px -22px 26px;background:var(--g);border-radius:14px;z-index:-1}
 .hp .sg{position:absolute;left:-30px;bottom:-30px;width:104px;border:6px solid #fff;border-radius:50%}
 .phead{background:var(--g);color:#fff;padding:clamp(2.6rem,6vw,4.6rem) 0} .phead h1{color:#fff;max-width:20ch}
@@ -45,7 +45,7 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .card .ic svg{width:24px} .card .more{font-weight:700;font-size:.88rem;color:var(--g);border-bottom:2px solid var(--a);align-self:flex-start}
 .card.alt{background:var(--g);border-color:var(--g);color:#fff} .card.alt h3{color:#fff} .card.alt p{color:#cfdcd5} .card.alt .more{color:#fff}
 .card.alt .ic{background:rgba(255,255,255,.12);color:var(--a)}
-.ab img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.ab img{border-radius:14px;width:100%;aspect-ratio:3/2.05;object-fit:cover;object-position:50% 0}
 .ticks{list-style:none;margin:1.2rem 0 1.8rem} .ticks li{position:relative;padding:.38rem 0 .38rem 1.9rem}
 .ticks li:before{content:"";position:absolute;left:0;top:.82rem;width:11px;height:11px;border-radius:50%;background:var(--a)}
 .steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:1.8rem}
@@ -53,7 +53,7 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .steps h3{margin:.5rem 0 .4rem} .steps p{font-size:.94rem;color:var(--m);margin:0}
 .people{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin:1.8rem 0 2rem}
 .person .ph{aspect-ratio:4/4.6;border-radius:12px;overflow:hidden;background:var(--g);display:grid;place-items:center;margin-bottom:.9rem}
-.person .ph img{width:100%;height:100%;object-fit:cover} .ini{font-size:2.6rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.person .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transition:transform .6s} .ini{font-size:2.6rem;font-weight:800;color:#fff;letter-spacing:-.02em}
 .ini:after{content:".";color:var(--a)}
 .role{display:block;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9a7a3a;margin:.35rem 0 .8rem}
 .news{border:1px solid var(--l);border-radius:12px;padding:1.6rem;background:#fff} .news p{font-size:.94rem;color:var(--m);margin:.6rem 0 0}
@@ -68,7 +68,7 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .tr{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 2.5rem;margin:1.4rem 0 1.6rem}
 .tr li{display:flex;gap:1rem;align-items:baseline;padding:.95rem 0;border-bottom:1px solid var(--l);font-weight:600} .tr b{color:var(--a);font-weight:800}
 .note{font-size:.9rem;color:var(--m);border-left:3px solid var(--a);padding-left:.9rem}
-.tph img{border-radius:14px;width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 30%;margin-bottom:2.6rem}
+.tph img{border-radius:14px;width:100%;aspect-ratio:16/8.4;object-fit:cover;object-position:50% 0;margin-bottom:2.6rem}
 .plist{display:grid;gap:1.6rem} .person.full{display:grid;grid-template-columns:200px 1fr;gap:2rem;align-items:start;border-bottom:1px solid var(--l);padding-bottom:1.6rem}
 .person.full h3{font-size:1.4rem} .person.full .ph{margin:0} .pc{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;font-weight:600;margin:0}
 .cdata{display:grid;gap:1.5rem} .cdata p{margin:0} .big{font-size:1.45rem;font-weight:800;text-decoration:none;overflow-wrap:anywhere}
@@ -94,3 +94,36 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 }
 @media(max-width:600px){ .grid3,.steps,.tr,.fg{grid-template-columns:1fr} .people{grid-template-columns:1fr 1fr;gap:1rem} .person.full{grid-template-columns:1fr}
   .person.full .ph{max-width:220px} .brand{width:160px} .bar{height:68px} .nav{top:68px} }
+
+/* ---------- animacje i ruch */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none} .js .card.rv.in:hover{transform:translateY(-5px)}
+.top{transition:box-shadow .3s} .top.sc{box-shadow:0 10px 30px -20px rgba(15,77,58,.55)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}} @keyframes pop{from{opacity:0;transform:scale(.95) translateY(20px)}}
+@keyframes bob{50%{transform:translateY(-9px)}} @keyframes spin{to{transform:rotate(360deg)}} @keyframes mq{to{transform:translateX(-50%)}}
+.hero{position:relative;overflow:hidden} .hero .wrap{position:relative}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero:before{width:560px;height:560px;right:-190px;top:-230px;border:2px dashed rgba(198,161,91,.55);animation:spin 70s linear infinite}
+.hero:after{width:300px;height:300px;left:-130px;bottom:-150px;border:2px dashed rgba(15,77,58,.22);animation:spin 90s linear infinite reverse}
+.js .hero .kick{animation:up .7s both} .js .hero h1{animation:up .8s .08s both} .js .hero .lead{animation:up .8s .2s both}
+.js .hero .hb{animation:up .8s .32s both} .js .hero .rot,.js .hero .motto{animation:up .8s .44s both} .js .hp{animation:pop 1s .25s both}
+.hp:before{transform:translate(var(--px,0),var(--py,0));transition:transform .3s ease-out}
+.hp .sg{animation:bob 5s ease-in-out infinite}
+.rot{font-weight:600;color:var(--m);margin:0 0 1rem;min-height:1.7em} .rot b{color:var(--g);display:inline-block;transition:opacity .35s,transform .35s;border-bottom:2px solid var(--a)}
+.rot b.out{opacity:0;transform:translateY(8px)}
+.mq{background:var(--g);color:#fff;overflow:hidden;padding:1.05rem 0;white-space:nowrap}
+.mqt{display:inline-flex;animation:mq 42s linear infinite;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.mqt span{display:inline-flex;align-items:center;padding-left:2.4rem} .mqt span:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--a);margin-left:2.4rem}
+.mq:hover .mqt{animation-play-state:paused}
+.card .ic{transition:.3s} .card:hover .ic{background:var(--g);color:var(--a);transform:rotate(-6deg) scale(1.08)}
+.more:after{content:"→";display:inline-block;margin-left:.45em;transition:transform .25s} .card:hover .more:after{transform:translateX(6px)}
+.btn:not(.sm):after{content:"→";display:inline-block;margin-left:.6em;transition:transform .25s} .btn:hover:after{transform:translateX(5px)}
+.js .steps li{border-top-color:transparent;position:relative}
+.js .steps li:before{content:"";position:absolute;left:0;top:-3px;height:3px;width:100%;background:var(--a);transform:scaleX(0);transform-origin:left;transition:transform 1s .25s}
+.js .steps li.in:before{transform:scaleX(1)}
+.person:hover .ph img{transform:scale(1.05)}
+.phead{position:relative;overflow:hidden} .phead .wrap{position:relative}
+.deco{position:absolute;right:-60px;top:50%;width:360px;margin-top:-180px;opacity:.08;animation:bob 8s ease-in-out infinite;pointer-events:none}
+.cta{position:relative;overflow:hidden} .cta .wrap{position:relative}
+.cta:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:2px dashed rgba(198,161,91,.4);right:-140px;bottom:-240px;animation:spin 60s linear infinite}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important} .js .rv{opacity:1;transform:none} .js .steps li:before{transform:none}}

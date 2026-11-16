@@ -127,3 +127,35 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 .cta{position:relative;overflow:hidden} .cta .wrap{position:relative}
 .cta:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:2px dashed rgba(198,161,91,.4);right:-140px;bottom:-240px;animation:spin 60s linear infinite}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important} .js .rv{opacity:1;transform:none} .js .steps li:before{transform:none}}
+
+/* ---------- v3: zakładki, dla kogo, kontakt przy ekspertach, aktualności */
+.tabs{display:grid;grid-template-columns:360px 1fr;gap:1.6rem;margin:1.8rem 0 0;align-items:start}
+.tl{display:grid;gap:.55rem}
+.tb{display:flex;align-items:center;gap:.9rem;width:100%;text-align:left;font:inherit;font-weight:700;font-size:.98rem;color:var(--g);
+  background:#fff;border:1px solid var(--l);border-radius:10px;padding:.8rem 1rem;cursor:pointer;transition:.25s}
+.tb .ic{flex:none;width:40px;height:40px;border-radius:9px;background:var(--s);display:grid;place-items:center;transition:.25s} .tb .ic svg{width:22px}
+.tb:hover{border-color:var(--g);transform:translateX(4px)}
+.tb.on{background:var(--g);border-color:var(--g);color:#fff;box-shadow:0 16px 30px -20px rgba(15,77,58,.7)} .tb.on .ic{background:rgba(255,255,255,.14);color:var(--a)}
+.tp{background:var(--s);border-radius:14px;padding:clamp(1.5rem,3vw,2.6rem);position:relative;overflow:hidden;margin-bottom:1rem}
+.tp h3{font-size:1.6rem;margin-bottom:.8rem;max-width:22ch} .tp p{max-width:62ch} .tp .ticks{margin:.6rem 0 1.6rem}
+.tn{position:absolute;right:1.4rem;top:.4rem;font-size:5.5rem;font-weight:800;color:#fff;line-height:1;letter-spacing:-.04em;pointer-events:none}
+.tp>*:not(.tn){position:relative}
+.js .tp{display:none;margin:0} .js .tp.on{display:block;animation:up .5s both}
+.dark{background:var(--g);color:#fff;position:relative;overflow:hidden} .dark h2{color:#fff} .dark .wrap{position:relative}
+.dark:before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;border:2px dashed rgba(198,161,91,.35);left:-170px;top:-220px;animation:spin 80s linear infinite}
+.aud{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:1.8rem}
+.aud li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:1.6rem;transition:.3s}
+.aud li:hover{background:rgba(255,255,255,.11);border-color:var(--a);transform:translateY(-4px)}
+.aud .ic{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--a);color:var(--g);margin-bottom:1rem} .aud .ic svg{width:24px}
+.aud h3{color:#fff;margin-bottom:.5rem} .aud p{color:#cfdcd5;font-size:.93rem;margin:0}
+.pbtn{display:inline-block;font-weight:700;font-size:.85rem;text-decoration:none;color:var(--g);border:1.5px solid var(--g);border-radius:6px;padding:.45rem .9rem;transition:.2s}
+.pbtn:hover{background:var(--g);color:#fff}
+.news{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:.25s} .news:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(15,77,58,.5)}
+.nth{height:150px;background:var(--g);position:relative;overflow:hidden}
+.nth svg{position:absolute;width:210px;right:-46px;top:-34px;opacity:.16;transition:transform .6s} .news:hover .nth svg{transform:scale(1.12) rotate(-6deg)}
+.news:nth-child(2) .nth{background:#16402f linear-gradient(135deg,#0f4d3a,#1d6a50)} .news:nth-child(3) .nth{background:#2a3b33}
+.tag{position:absolute;left:1.2rem;bottom:1.1rem;background:var(--a);color:var(--i);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem;border-radius:4px}
+.nb{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.2rem;flex:1} .nb p{flex:1;margin-bottom:1rem}
+.nb .more{font-weight:700;font-size:.88rem;color:var(--g);border-bottom:2px solid var(--a);align-self:flex-start}
+@media(max-width:960px){ .tabs{grid-template-columns:1fr} .tl{grid-template-columns:1fr 1fr} .aud{grid-template-columns:1fr 1fr} .tb:hover{transform:none} }
+@media(max-width:600px){ .tl,.aud{grid-template-columns:1fr} .tn{font-size:4rem} }

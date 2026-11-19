@@ -183,3 +183,5 @@ a.news{text-decoration:none;color:var(--i)} .meta{font-size:.74rem;font-weight:7
 .faq summary::-webkit-details-marker{display:none} .faq summary:after{content:"+";font-size:1.5rem;line-height:1;color:var(--a);transition:transform .25s}
 .faq details[open] summary:after{transform:rotate(45deg)} .faq p{margin:.8rem 0 0}
 @media(max-width:960px){ .feat,.art{grid-template-columns:1fr} .feat .nth{min-height:180px} .toc{position:static;order:-1} }
+
+.soon{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a948f}

@@ -160,6 +160,12 @@ a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{ou
 @media(max-width:960px){ .tabs{grid-template-columns:1fr} .tl{grid-template-columns:1fr 1fr} .aud{grid-template-columns:1fr 1fr} .tb:hover{transform:none} }
 @media(max-width:600px){ .tl,.aud{grid-template-columns:1fr} .tn{font-size:4rem} }
 
+/* ---------- v6: treść wpisów */
+.art.solo{display:block} .ahead h1{max-width:30ch}
+.prose h3{font-size:1.15rem;margin:1.5rem 0 .4rem} .prose ul{margin:0 0 1.3rem 1.3rem} .prose li{margin:.35rem 0;font-size:1.04rem}
+.prose a{color:var(--g);font-weight:600;overflow-wrap:anywhere}
+.prose blockquote{border-left:4px solid var(--a);margin:1.5rem 0;padding:.3rem 0 .3rem 1.3rem} .prose blockquote p{font-weight:600;color:var(--g);margin:0}
+
 /* ---------- v4: aktualności i artykuł */
 a.news{text-decoration:none;color:var(--i)} .meta{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9a7a3a;margin-bottom:.3rem}
 .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
